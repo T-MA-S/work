@@ -23,7 +23,11 @@ class StreetViewSet(viewsets.ModelViewSet):
 
 
 def index(request):
-    return HttpResponse("<h1>Добро пожаловать</h1>")
+    return HttpResponse("<h1>Добро пожаловать</h1> <br> <p>GET /city/ - получение всех городов "
+                        "<br> <p>GET /street/ - получение всех улиц"
+                        "из бд</p> <p>GET /city_id/street - получение всех улиц города из бд </p>"
+                        "  <p>POST /shops/ - добавление магазина в бд</p>"
+                        " <p>GET /shop/?street=&city=&open=1/0 - получение всех магазинов из бд по условиям</p>")
 
 
 
