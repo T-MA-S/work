@@ -22,6 +22,11 @@ class StreetViewSet(viewsets.ModelViewSet):
     serializer_class = StreetSerializer
 
 
+def index(request):
+    return HttpResponse("<h1>Добро пожаловать</h1>")
+
+
+
 def find_streets(request, city_id):
     streets = Street.objects.filter(city_id=city_id)
     json_response = '{"streets":['
