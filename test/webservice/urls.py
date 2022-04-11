@@ -12,8 +12,8 @@ router2.register(r'', views.StreetViewSet)
 
 urlpatterns = [
     path('city/', include(router.urls)),
-    #path('shop/', include(router1.urls)),
-    #path('street/', include(router2.urls)),
-    path('street/<int:city_id>/', views.find_streets),
-    path('shop/<int:city>', views.shop_sort)
+    path('shops/', include(router1.urls)),
+    path('street/', include(router2.urls)),
+    path('<int:city_id>/street/', views.find_streets),
+    path('shop/', views.shop_sort)
 ]
